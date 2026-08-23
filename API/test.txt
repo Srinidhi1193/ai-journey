@@ -1,0 +1,42 @@
+NOTES — Python File Handling
+1) Context manager preferred
+Use with open(...) for reading/writing files.
+Automatically closes and cleans up the file.
+
+2) File paths
+Relative path → relative to the current working directory.
+Absolute path → complete path from the root/drive.
+
+3) open()
+Syntax: open("file.txt", mode)
+Common modes:
+r → read (default)
+w → write/overwrite
+a → append
+r+ → read + write
+
+4) Avoid manual open() + close()
+Forgetting close() can cause resource/file-handle issues.
+Context manager handles this automatically.
+with open("test.txt", "r") as f:
+    # work with file
+
+5) Reading methods
+f.read() → reads entire file.
+f.readlines() → returns all lines as a list.
+f.readline() → reads one line.
+For large files, iterate line-by-line:
+for line in f:
+    print(line, end="")
+
+6) File position
+f.tell() → returns current file position.
+f.seek(position) → moves file position.
+
+Important extra
+w creates the file if it doesn't exist and overwrites existing content.
+a creates the file if it doesn't exist and adds content to the end.
+r requires the file to already exist.
+Always specify encoding when working with text files when appropriate:
+with open("test.txt", "r", encoding="utf-8") as f:
+    data = f.read()

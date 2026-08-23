@@ -1,0 +1,64 @@
+{
+  "states": [
+    {
+      "name": "Tamil Nadu",
+      "abbreviation": "TN",
+      "capital": "Chennai",
+      "state_code": "33"
+    },
+    {
+      "name": "Karnataka",
+      "abbreviation": "KA",
+      "capital": "Bengaluru",
+      "state_code": "29"
+    },
+    {
+      "name": "Kerala",
+      "abbreviation": "KL",
+      "capital": "Thiruvananthapuram",
+      "state_code": "32"
+    },
+    {
+      "name": "Andhra Pradesh",
+      "abbreviation": "AP",
+      "capital": "Amaravati",
+      "state_code": "37"
+    },
+    {
+      "name": "Telangana",
+      "abbreviation": "TS",
+      "capital": "Hyderabad",
+      "state_code": "36"
+    },
+    {
+      "name": "Maharashtra",
+      "abbreviation": "MH",
+      "capital": "Mumbai",
+      "state_code": "27"
+    },
+    {
+      "name": "Gujarat",
+      "abbreviation": "GJ",
+      "capital": "Gandhinagar",
+      "state_code": "24"
+    },
+    {
+      "name": "Rajasthan",
+      "abbreviation": "RJ",
+      "capital": "Jaipur",
+      "state_code": "08"
+    },
+    {
+      "name": "West Bengal",
+      "abbreviation": "WB",
+      "capital": "Kolkata",
+      "state_code": "19"
+    },
+    {
+      "name": "Uttar Pradesh",
+      "abbreviation": "UP",
+      "capital": "Lucknow",
+      "state_code": "09"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "states": [
+    {
+      "capital": "Chennai",
+      "name": "Tamil Nadu",
+      "state_code": "33"
+    },
+    {
+      "capital": "Bengaluru",
+      "name": "Karnataka",
+      "state_code": "29"
+    },
+    {
+      "capital": "Thiruvananthapuram",
+      "name": "Kerala",
+      "state_code": "32"
+    },
+    {
+      "capital": "Amaravati",
+      "name": "Andhra Pradesh",
+      "state_code": "37"
+    },
+    {
+      "capital": "Hyderabad",
+      "name": "Telangana",
+      "state_code": "36"
+    },
+    {
+      "capital": "Mumbai",
+      "name": "Maharashtra",
+      "state_code": "27"
+    },
+    {
+      "capital": "Gandhinagar",
+      "name": "Gujarat",
+      "state_code": "24"
+    },
+    {
+      "capital": "Jaipur",
+      "name": "Rajasthan", 
+      "state_code": "08"
+    },
+    {
+      "capital": "Kolkata",
+      "name": "West Bengal",
+      "state_code": "19"
+    },
+    {
+      "capital": "Lucknow",
+      "name": "Uttar Pradesh",
+      "state_code": "09"
+    }
+  ]
+}
