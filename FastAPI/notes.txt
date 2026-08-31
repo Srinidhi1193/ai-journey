@@ -1,0 +1,38 @@
+""" 
+FastAPI - Web framework 
+Uvicorn - Web server
+Pydantic - Data validation 
+         - converting server side data into json format to send it to client.
+Do not install across all projects.
+SqlAlchemy - Object Relational Mapping
+mysql-connector-python -driver for MySQL
+
+How to isolate package for single project in python?
+
+    1) create a virtual environment - python -m venv proj_name
+    2) activate - file structure -> scripts -> powershell = copy path
+    3) You will env name before path.
+    4) deactivate - to deactivate virtual env.
+    5) pip list -> before activate = lots of libraries.
+                -> after activate = required lib.
+    6) pip install fastapi uvicorn
+
+Swagger
+localhost:8080/docs
+
+File Structure
+
+main.py - define functions
+model.py - define class and objects -> pydantic(data validation)
+database_model.py - define the sqlalchemy tables and attributes
+database.py - configuration of DB, sqlalchemy and python
+
+database.py
+
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine
+
+db_url = "mysql://root:Sri%231193@localhost:3306/db_name" //#=%23
+engine = create_engine(db_url)
+Session = sessionmaker(autocommit = False, autoflush = False, bind = engine)
+ """
