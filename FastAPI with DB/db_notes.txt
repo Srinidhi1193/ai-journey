@@ -1,0 +1,54 @@
+File Structure
+
+main.py - define functions
+model.py - define class and objects -> pydantic(data validation)
+database_model.py - define the sqlalchemy tables and attributes
+database.py - configuration of DB, sqlalchemy and python
+
+database.py
+
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine
+
+db_url = "mysql://root:Sri%231193@localhost:3306/db_name" //#=%23
+engine = create_engine(db_url)
+Session = sessionmaker(autocommit = False, autoflush = False, bind = engine)
+
+database_model.py
+
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import column,Integer,String,Float
+
+base = declarative_base()
+
+class ....(base):
+    __tablename__ == ""
+
+    id = Column(Integer, primary_key=True,Index= True)
+
+main.py
+
+from fastapi import FastAPI,depends
+from database import session,engine
+import database_models
+
+database_model.Base.metadata.create_all(bind=engine)
+
+def init_db():
+    db = session()
+    count = db.query(database_models.product).count
+    if count == 0
+        for product in products:
+            db.add(database_models.product(**product.model_dump()))
+        db.commit()
+    init_db()
+
+def get_db():
+    db = session
+    try:
+        yield db
+    finally:
+        db.close()
+
+now in every method
+def get_all(db: Session = depends(get_db)):
