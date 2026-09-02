@@ -52,3 +52,42 @@ def get_db():
 
 now in every method
 def get_all(db: Session = depends(get_db)):
+
+STEPS:
+
+1)FastAPI codes
+2)create virtual environment
+3)activate env
+4)pip install fastapi,uvicorn,sqlalchemy,mysql-connector-python
+5) database.py
+    i)   sqlalchemy.orm -> sessionmaker
+    ii)  sqlalchemy -> create_engine
+    iii) db_url -> "mysql+mysqlconnector://root:Sri%231193@localhost:3306/db_name"
+6)db_model.py
+    i)   from sqlalchemy.ext.declarative import declarative_base
+    ii)  from sqlalchemy import Column,Integer...
+7)main.py
+    i)   table loading -> db_model.base.metadata.create_all(bind=engine)
+    ii)  init_db():
+            db = session
+            try:
+                count = db.query(db_model.class).count()
+                if count == 0:
+                    for n in lis:
+                        db.add(db_model.class(**n.model_dump()))
+                db.commit()
+            finally:
+                db.close()
+        init_db()
+    iii) db_get():
+            db = Session()
+            try:
+                yield db
+            finally:
+                db.close()
+    iv)  imports Depends and func to use in all functions
+            def add_expense(exp: Expense, db:Session = Depends(db_get)):
+            total = db.query(func.sum(expense_db.Expense.amount)).scalar()
+            cat_list = db.query(expense_db.Expense).filter(expense_db.Expense.category == cat).all()
+
+                    
